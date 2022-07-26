@@ -82,10 +82,10 @@ class Path(QObject):
             sq.update()
         
     def animate(self):
-        k = len(self.path)-1
+        k = len(self.path)
         self.anim = QPropertyAnimation(self, b"step")
         self.anim.setStartValue(0)
-        self.anim.setEndValue(k)
+        self.anim.setEndValue(k-1)
         self.anim.setDuration(500*k)
         self.anim.start()
 
